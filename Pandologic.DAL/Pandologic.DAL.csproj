@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.0.90" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DatabaseConnections\DatabaseConnections.csproj" />
+    <ProjectReference Include="..\Pandologic.Entities\Pandologic.Entities.csproj" />
+    <ProjectReference Include="..\Processing\Processing.csproj" />
+  </ItemGroup>
+
+</Project>

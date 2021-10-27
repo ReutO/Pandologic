@@ -1,0 +1,9 @@
+C:\Users\User\Documents\projects\Interviews2\Pandologic\Processing\bin\Debug\netstandard2.0\Processing.deps.json
+C:\Users\User\Documents\projects\Interviews2\Pandologic\Processing\bin\Debug\netstandard2.0\Processing.dll
+C:\Users\User\Documents\projects\Interviews2\Pandologic\Processing\bin\Debug\netstandard2.0\Processing.pdb
+C:\Users\User\Documents\projects\Interviews2\Pandologic\Processing\obj\Debug\netstandard2.0\Processing.csprojAssemblyReference.cache
+C:\Users\User\Documents\projects\Interviews2\Pandologic\Processing\obj\Debug\netstandard2.0\Processing.AssemblyInfoInputs.cache
+C:\Users\User\Documents\projects\Interviews2\Pandologic\Processing\obj\Debug\netstandard2.0\Processing.AssemblyInfo.cs
+C:\Users\User\Documents\projects\Interviews2\Pandologic\Processing\obj\Debug\netstandard2.0\Processing.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\projects\Interviews2\Pandologic\Processing\obj\Debug\netstandard2.0\Processing.dll
+C:\Users\User\Documents\projects\Interviews2\Pandologic\Processing\obj\Debug\netstandard2.0\Processing.pdb

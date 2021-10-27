@@ -1,0 +1,18 @@
+<form [formGroup]="jobSearchForm" (ngSubmit)="onSearchJobs()">
+  <mat-form-field appearance="fill">
+    <mat-label>Enter a job title</mat-label>
+    <input matInput [matAutocomplete]="displayTitles" formControlName='jobInput' type="search">
+    <button mat-button matSuffix mat-stroked-button aria-label="jobInput" type="submit">
+      <mat-icon>search</mat-icon>
+    </button>
+    <mat-hint>Please select from option list</mat-hint>
+  </mat-form-field>
+  <mat-autocomplete #displayTitles="matAutocomplete" [displayWith]="displayTitleOptions">
+    <mat-option *ngIf="isLoading" class="is-loading"><mat-spinner diameter="50"></mat-spinner></mat-option>
+    <ng-container *ngIf="!isLoading">
+      <mat-option *ngFor="let title of filteredJobTitles" [value]="title">
+        <span>{{ title.name }}</span>
+      </mat-option>
+    </ng-container>
+  </mat-autocomplete>
+</form>

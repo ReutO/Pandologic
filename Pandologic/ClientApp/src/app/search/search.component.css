@@ -1,0 +1,34 @@
+form{
+  text-align: center;
+}
+
+mat-form-field {
+  width: 50%;        
+}
+
+.buttonFormField{
+  padding-bottom: 1.34375em;
+  display: inline-block;
+}
+
+button {
+  height: 60px;
+  border-radius: 4px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: #a3dbe1;
+  color: white;
+}
+
+::ng-deep .mat-form-field-appearance-fill {
+  color: black !important;
+  background-color: white !important;
+}
+
+::ng-deep .mat-form-field-underline {
+  display: none;
+}
+
+::ng-deep.mat-form-field-ripple {
+ background-color: white !important;;
+}

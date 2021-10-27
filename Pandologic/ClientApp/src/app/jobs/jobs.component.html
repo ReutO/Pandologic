@@ -1,0 +1,54 @@
+<mat-card>
+    <mat-card-subtitle>The relevant jobs are:</mat-card-subtitle>
+    <mat-card-content>
+        <div class="table-container mat-elevation-z8">
+
+            <div class="spinner-container" *ngIf="dataSource.loading$ | async">
+                <mat-spinner></mat-spinner>
+            </div>
+            
+            <mat-table [dataSource]="dataSource" 
+                matSort matSortActive="jobTitleDescription"
+                matSortDirection="asc" 
+                matSortDisableClear>
+
+                <!-- index Column -->
+                <ng-container matColumnDef="index">
+                    <mat-header-cell *matHeaderCellDef> # </mat-header-cell>
+                    <mat-cell *matCellDef="let element; let i = index;">{{i}}</mat-cell>
+                </ng-container>
+            
+                <!-- jobTitle Column -->
+                <ng-container matColumnDef="jobTitleDescription">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> Job Description </mat-header-cell>
+                <mat-cell *matCellDef="let row"> {{row.jobTitleDescription}}</mat-cell>
+                </ng-container>
+            
+                <!-- educationLevel Column -->
+                <ng-container matColumnDef="educationLevel">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> Education Level </mat-header-cell>
+                <mat-cell *matCellDef="let row"> {{row.educationLevel}} </mat-cell>
+                </ng-container>
+            
+                <!-- clicks Column -->
+                <ng-container matColumnDef="clicks">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> Clicks </mat-header-cell>
+                <mat-cell *matCellDef="let row"> {{row.clicks}} </mat-cell>
+                </ng-container>
+
+                <!-- applicants Column -->
+                <ng-container matColumnDef="applicants">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header> Applicants </mat-header-cell>
+                    <mat-cell *matCellDef="let row"> {{row.applicants}} </mat-cell>
+                </ng-container>
+            
+                <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                    <mat-row *matRowDef="let row; columns: displayedColumns;">
+                    </mat-row>
+            </mat-table>
+            
+            <mat-paginator [length]="jobs?.length" [pageSize]="10"
+                   [pageSizeOptions]="[10, 25, 100]"></mat-paginator>
+        </div>
+    </mat-card-content>
+</mat-card>
